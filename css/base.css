@@ -1,0 +1,81 @@
+/* 把所有标签内外边距清零 */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* CSS3盒子模型 */
+    box-sizing: border-box;
+}
+
+
+/* em和i的文字不倾斜 */
+
+em,
+i {
+    font-style: normal;
+}
+
+
+/* 去掉li的小圆点 */
+
+li {
+    list-style: none;
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle;
+}
+
+button {
+    /* 当我们鼠标经过button按钮时候，鼠标变小手 */
+    cursor: pointer;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c81623;
+}
+
+button,
+input {
+    /* \5B8B\4F53 是宋体的Unicode编码，浏览器兼容较好 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 默认有灰色边框我们需要手动去掉 */
+    border: 0;
+    outline: none;
+}
+
+body {
+    /* 抗锯齿性 让文字显示更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666
+}
+
+.hide,
+.none {
+    display: none
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
